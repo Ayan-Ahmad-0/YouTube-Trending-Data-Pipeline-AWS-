@@ -173,8 +173,9 @@ A few notable issues worked through during development:
 
 ## 📊 Sample Output
 
-*(Add a screenshot here of your S3 partitioned folder structure, an Athena query result, or the Step Functions execution graph showing a successful run.)*
-
+###  Step Functions execution graph showing a successful run.
+![Step Functions Execution Graph](YouTube%20Trending%20Data%20Pipeline/images/stepfunctions_graph.png)
+ 
 ---
 
 ## 🛠️ Future Improvements
