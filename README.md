@@ -2,7 +2,7 @@
 
 An end-to-end, serverless data pipeline on AWS that ingests YouTube trending video data across multiple regions, cleanses and validates it, and produces analytics-ready aggregated tables using a **Bronze → Silver → Gold (medallion) architecture**.
 
-![Architecture Diagram](architecture-diagram.png)
+![Architecture Diagram](YouTube Trending Data Pipeline/images/youtube_pipeline_architecture.png)ram.png)
 
 ---
 
