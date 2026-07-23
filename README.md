@@ -16,7 +16,7 @@ An end-to-end, serverless data pipeline on AWS that ingests YouTube trending vid
 ![YouTube Data API](https://img.shields.io/badge/YouTube%20Data%20API-FF0000?style=flat&logo=youtube&logoColor=white)
 ![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat&logo=amazoncloudwatch&logoColor=white)
 ![Parquet](https://img.shields.io/badge/Apache%20Parquet-50ABF1?style=flat&logo=apache&logoColor=white)
-![JSON](https://img.shields.io/badge/JSON-000000?style=flat&logo=json&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-grey?style=flat&logo=json&logoColor=white)
 
 
 ## 📋 Overview
