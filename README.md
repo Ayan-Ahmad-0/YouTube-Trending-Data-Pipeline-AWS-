@@ -46,7 +46,7 @@ This pipeline automatically:
 
 ### Architecture Diagram
 
-![Architecture Diagram](YouTube%20Trending%20Data%20Pipeline/images/youtube_pipeline_architecture.png)
+![Architecture Diagram](YouTube%20Trending%20Data%20Pipeline/images/youtube_pipeline_architecture-3.png)
 
 
 ### Tech Stack
