@@ -19,7 +19,7 @@ An end-to-end, serverless data pipeline on AWS that ingests YouTube trending vid
 ![JSON](https://img.shields.io/badge/JSON-grey?style=flat&logo=json&logoColor=white)
 
 
-## 📋 Overview
+## Overview
 
 This pipeline automatically:
 1. Pulls trending video statistics and category metadata from the **YouTube Data API** across multiple regions (US, GB, CA, IN)
@@ -32,7 +32,7 @@ This pipeline automatically:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 **Data Sources** → **Bronze (raw)** → **Silver (cleansed)** → **Data Quality Gate** → **Gold (aggregated)** → **Analytics/Consumption**
 
@@ -65,7 +65,7 @@ This pipeline automatically:
 
 ---
 
-## 🔄 Pipeline Flow (Step Functions)
+## Pipeline Flow (Step Functions)
 
 ```
 IngestFromYouTubeAPI
@@ -100,7 +100,7 @@ Every task step includes **retry logic** (exponential backoff) and **catch block
 
 ---
 
-## 🗂️ Gold Layer Tables
+## Gold Layer Tables
 
 | Table | Description |
 |---|---|
@@ -110,7 +110,7 @@ Every task step includes **retry logic** (exponential backoff) and **catch block
 
 ---
 
-## ✅ Data Quality Checks
+## Data Quality Checks
 
 Before Silver data is promoted to Gold, an automated quality gate validates:
 
@@ -124,7 +124,7 @@ If any check fails, the pipeline halts before Gold aggregation and sends a detai
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 youtube-data-pipeline/
@@ -147,7 +147,7 @@ youtube-data-pipeline/
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 The pipeline is parameterized via environment variables (Lambda) and job parameters (Glue), so no credentials or resource names are hardcoded in application logic.
 
@@ -174,7 +174,7 @@ YOUTUBE_REGIONS
 
 ---
 
-## 🔐 IAM & Security Notes
+## IAM & Security Notes
 
 Each component runs under a dedicated, least-privilege IAM role:
 - **Lambda execution role** — scoped S3 read/write on relevant buckets, Glue Catalog access, SNS publish, Athena query execution
@@ -183,7 +183,7 @@ Each component runs under a dedicated, least-privilege IAM role:
 
 ---
 
-## 🚧 Engineering Challenges Solved
+## Engineering Challenges Solved
 
 A few notable issues worked through during development:
 - Diagnosed and resolved multiple IAM permission gaps across Lambda, Glue, and Step Functions roles (Glue Catalog access, S3 read/write, Athena query execution)
@@ -194,14 +194,14 @@ A few notable issues worked through during development:
 
 ---
 
-## 📊 Sample Output
+## Sample Output
 
 ###  Step Functions execution graph showing a successful run.
 ![Step Functions Execution Graph](YouTube%20Trending%20Data%20Pipeline/images/stepfunctions_graph.png)
  
 ---
 
-## 🛠️ Future Improvements
+## Future Improvements
 
 - Add a QuickSight dashboard on top of the Gold layer for visual analytics
 - Expand region coverage
